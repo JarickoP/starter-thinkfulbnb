@@ -17,6 +17,7 @@ h3 {
 }
 
 p {
+  font-size: large;
   line-height: 1.5em;
   margin: 0;
 }
@@ -31,7 +32,20 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+label {
+  justify-content: flex-start;
+}
+
+main section ul li {
+  font-size: large;
 }
 
 /* ---  Groups & Items --- */
@@ -42,12 +56,33 @@ main img {
 }
 
 .item {
+  display: flex ;
+  justify-content: space-between;
+  align-content: center;
   flex: 1;
   margin: 10px;
 }
 
 .item-double {
   flex: 2;
+  padding-left: 15px;
+}
+
+.image-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-item {
+  flex:1;
+  width:98%;
+  padding: 10px;
+}
+
+.image-column {
+  display:flex;
+  flex-direction: column;
+  width: 98%;
 }
 
 /* -------  Navigation ------- */
@@ -64,8 +99,15 @@ header {
   color: #fff;
 }
 
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
 header nav ul li {
   list-style-type: none;
+  display: inline-flex;
+  padding-left: 0;
 }
 
 header nav ul li a {
@@ -93,6 +135,7 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  justify-content:flex-end;
 }
 
 form button {
@@ -117,3 +160,56 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width:800px) {
+  /* change button orientation*/
+  .item {
+    flex-direction: column;
+    display: flex ;
+    justify-content: space-around;
+    align-content:flex-start;
+    flex: 1;
+    margin: 10px;
+  }
+
+  .about {
+    flex: 1;
+    padding: 30px;
+  }
+
+  .img-size {
+    flex:1;
+    width:30%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  .image-group {
+    flex-direction: row;
+  }
+
+  .image-item {
+    width: 100px;
+  }
+
+  .image-column {
+    width:40%;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .rows {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-change {
+    flex-direction: row;
+    display:flex;
+  }
+  /* change picture orientation*/
+  /* change text placement*/
+}
