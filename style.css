@@ -95,7 +95,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 45px;
+  font-size: 59px;
   color: #fff;
 }
 
@@ -210,7 +210,7 @@ footer p {
     flex-direction: row;
     display:flex;
   }
-  
+
   .logo {
     font-size: 72px;
   }
